@@ -5,19 +5,13 @@ import { useInView } from 'react-intersection-observer'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  TruckIcon,
-  CubeIcon,
-  ScaleIcon,
   ClockIcon,
   CheckCircleIcon,
   PhoneIcon,
-  MapPinIcon,
   ShieldCheckIcon,
-  StarIcon,
+  TruckIcon,
   WrenchScrewdriverIcon,
-  CalendarDaysIcon,
-  CogIcon,
-  BuildingOffice2Icon
+  CubeIcon
 } from '@heroicons/react/24/outline'
 
 const ConstructionServices = () => {
@@ -29,21 +23,21 @@ const ConstructionServices = () => {
 
   const materials = [
     {
-      icon: CubeIcon,
+      image: '/assets/quarry.jpg',
       title: 'Quarry Stones',
       description: 'High-quality quarry stones in various sizes for construction and landscaping projects.',
       specifications: ['0.5 inch chips', '0.75 inch stones', '1.5 inch stones', 'Custom sizes available'],
       priceRange: 'From GH₵ 80 per ton'
     },
     {
-      icon: ScaleIcon,
+      image: '/assets/sand.jpg',
       title: 'Building Sand',
       description: 'Premium grade building sand suitable for all construction needs including plastering and block laying.',
       specifications: ['River sand', 'Washed sand', 'Fine sand', 'Coarse sand'],
       priceRange: 'From GH₵ 120 per ton'
     },
     {
-      icon: TruckIcon,
+      image: '/assets/gravels.jpg',
       title: 'Gravels (Earth)',
       description: 'Various grades of gravels and earth materials for foundations, road construction, and landscaping.',
       specifications: ['Foundation gravels', 'Road base gravels', 'Drainage gravels', 'Decorative gravels'],
@@ -53,7 +47,7 @@ const ConstructionServices = () => {
 
   const equipment = [
     {
-      icon: BuildingOffice2Icon,
+      image: '/assets/grader.jpg',
       title: 'Motor Grader',
       description: 'Professional motor graders for road construction, land leveling, and fine grading operations.',
       specifications: [
@@ -67,7 +61,7 @@ const ConstructionServices = () => {
       applications: ['Road construction', 'Land leveling', 'Drainage work', 'Fine grading']
     },
     {
-      icon: TruckIcon,
+      image: '/assets/bulldozer.jpg',
       title: 'Bulldozer',
       description: 'Heavy-duty bulldozers for earthmoving, site clearing, and major construction projects.',
       specifications: [
@@ -81,7 +75,7 @@ const ConstructionServices = () => {
       applications: ['Site clearing', 'Earthmoving', 'Demolition', 'Land preparation']
     },
     {
-      icon: CogIcon,
+      image: '/assets/payloader.jpg',
       title: 'Payloader (Wheel Loader)',
       description: 'Versatile wheel loaders for material handling, loading, and general construction tasks.',
       specifications: [
@@ -207,10 +201,14 @@ const ConstructionServices = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
               >
-                <div className="relative h-48 bg-gray-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-atkada-red/80 to-atkada-gold/80 flex items-center justify-center">
-                    <material.icon className="h-16 w-16 text-white" />
-                  </div>
+                <div className="relative h-48 bg-gray-200 overflow-hidden">
+                  <Image
+                    src={material.image}
+                    alt={material.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold font-heading text-atkada-red mb-4">{material.title}</h3>
@@ -275,10 +273,7 @@ const ConstructionServices = () => {
               >
                 <div className="lg:flex">
                   <div className="lg:w-1/2 p-8 lg:p-12">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-atkada-red to-atkada-gold rounded-2xl flex items-center justify-center mr-4">
-                        <machine.icon className="h-8 w-8 text-white" />
-                      </div>
+                    <div className="mb-6">
                       <h3 className="text-3xl font-bold font-heading text-atkada-red">{machine.title}</h3>
                     </div>
                     
@@ -325,10 +320,14 @@ const ConstructionServices = () => {
                     </div>
                   </div>
                   
-                  <div className="lg:w-1/2 relative h-64 lg:h-auto bg-gray-200">
-                    <div className="absolute inset-0 bg-gradient-to-br from-atkada-red/80 to-atkada-gold/80 flex items-center justify-center">
-                      <machine.icon className="h-24 w-24 text-white" />
-                    </div>
+                  <div className="lg:w-1/2 relative h-64 lg:h-auto bg-gray-200 overflow-hidden">
+                    <Image
+                      src={machine.image}
+                      alt={machine.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
                 </div>
               </motion.div>
@@ -412,39 +411,7 @@ const ConstructionServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-atkada-red to-atkada-gold">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-white max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">
-              Ready to Build Your Project?
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              Get comprehensive construction services with quality materials and professional equipment. Contact us for a custom quote today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-atkada-red font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-lg"
-              >
-                Request Quote
-                <PhoneIcon className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="tel:+233302961684"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-atkada-red transition-colors duration-300"
-              >
-                Call Now: +233 302 961 684
-                <PhoneIcon className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   )
 }

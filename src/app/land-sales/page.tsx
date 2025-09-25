@@ -222,7 +222,7 @@ const LandSales = () => {
         </div>
       </section>
 
-      {/* Amenities Section */}
+      {/* Amenities Section
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -273,9 +273,9 @@ const LandSales = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Gallery Section */}
+      {/* Gallery Section
       <section ref={galleryRef} className="section-padding bg-gray-50">
         <div className="container-custom">
           <motion.div
@@ -328,7 +328,7 @@ const LandSales = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-atkada-red to-atkada-gold py-16">

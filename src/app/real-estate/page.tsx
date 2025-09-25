@@ -14,6 +14,7 @@ import {
   PhoneIcon,
   StarIcon
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 const RealEstate = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 })
@@ -345,13 +346,19 @@ const RealEstate = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              className="relative"
             >
-              <div className="bg-gradient-to-br from-atkada-red/10 to-atkada-gold/10 rounded-2xl p-8 h-96 flex items-center justify-center">
-                <div className="text-center text-atkada-red/60">
-                  <ShieldCheckIcon className="h-24 w-24 mx-auto mb-4" />
-                  <div className="text-2xl font-bold mb-2">QUALITY ASSURANCE</div>
-                  <div className="text-lg">IMAGE PLACEHOLDER</div>
-                  <div className="text-sm mt-2">Construction quality and inspection</div>
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg group">
+                <Image 
+                  src="/assets/qualityrealestate.jpg" 
+                  alt="Quality Real Estate Development" 
+                  fill 
+                  className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-xl font-bold font-heading mb-2">Premium Quality</h3>
+                  <p className="text-white/90">International standards in every project</p>
                 </div>
               </div>
             </motion.div>
