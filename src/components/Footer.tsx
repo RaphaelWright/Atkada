@@ -16,6 +16,7 @@ const Footer = () => {
     { name: 'Land Sales', href: '/land-sales' },
     { name: 'Real Estate', href: '/real-estate' },
     { name: 'Rooms for Rent', href: '/rooms' },
+    { name: 'Construction Services', href: '/construction-services' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -23,6 +24,9 @@ const Footer = () => {
   const services = [
     'Land Sales',
     'Real Estate Development',
+    'Construction Services',
+    'Building Materials Supply',
+    'Equipment Rental',
     'Property Rentals',
     'Site Visits',
     'Property Management',
@@ -60,7 +64,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Secure your future with trusted land sales, real estate development, and quality rentals in Ghana. 
+              Secure your future with trusted land sales, real estate development, construction services, and quality rentals in Ghana. 
               Building secure, serene communities, one trusted plot at a time.
             </p>
             <div className="flex space-x-4">

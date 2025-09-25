@@ -13,7 +13,9 @@ import {
   PhoneIcon,
   MapPinIcon,
   ClockIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  TruckIcon,
+  CubeIcon
 } from '@heroicons/react/24/outline'
 import React from 'react'
 
@@ -44,6 +46,11 @@ const Home = () => {
       icon: StarIcon,
       title: 'Trusted Rentals & Real Estate',
       description: 'Quality rental properties and expertly developed real estate projects across prime locations.',
+    },
+    {
+      icon: CubeIcon,
+      title: 'Construction Services',
+      description: 'Complete construction support with building materials supply and earth moving equipment rental with skilled operators.',
     },
   ]
 
@@ -160,7 +167,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}

@@ -15,8 +15,10 @@ A modern, mobile-responsive website for Atkada Company Limited built with Next.j
 - **Home**: Hero section, company features, testimonials, and CTAs
 - **About Us**: Company story, mission, vision, values, and office information
 - **Land Sales**: Available plots, locations, features, and specifications
-- **Real Estate Development**: Estate projects, development services, and quality assurance
-- **Rooms for Rent**: Rental properties with filtering and interactive gallery
+- **Housing** (Dropdown Menu):
+  - **Real Estate Development**: Estate projects, development services, and quality assurance
+  - **Rooms for Rent**: Rental properties with filtering and interactive gallery
+- **Construction Services**: Combined building materials supply and equipment rental services
 - **Gallery**: Photo and video showcase of all properties and projects
 - **Contact**: Contact form, office information, and Google Maps integration
 
@@ -27,8 +29,7 @@ A modern, mobile-responsive website for Atkada Company Limited built with Next.j
   - Gold: #F4B400
   - White for backgrounds
 - **Typography**: 
-  - Headings: Montserrat/Poppins (bold)
-  - Body: Open Sans/Lora
+  - Font: Nunito (clean, modern, friendly sans-serif throughout)
 - **Interactive Elements**: Rounded buttons with hover transitions (gold → red)
 
 ## Technologies Used
@@ -65,6 +66,7 @@ A modern, mobile-responsive website for Atkada Company Limited built with Next.j
 
 - Land Sales (70×100 ft plots)
 - Real Estate Development
+- Construction Services (materials & equipment)
 - Property Rentals
 - Site Visits and Consultations
 - Investment Advisory

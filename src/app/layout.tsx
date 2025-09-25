@@ -1,18 +1,12 @@
 import type { Metadata } from 'next'
-import { Montserrat, Open_Sans } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
-const montserrat = Montserrat({
+const nunito = Nunito({
   subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
-
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  variable: '--font-open-sans',
+  variable: '--font-nunito',
   display: 'swap',
 })
 
@@ -63,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${nunito.variable}`}>
       <body className="font-body">
         <Navigation />
         <main className="min-h-screen">

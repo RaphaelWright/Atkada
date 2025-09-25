@@ -21,8 +21,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        'heading': ['Montserrat', 'Poppins', 'sans-serif'],
-        'body': ['Open Sans', 'Lora', 'sans-serif'],
+        'heading': ['var(--font-nunito)', 'Nunito', 'sans-serif'],
+        'body': ['var(--font-nunito)', 'Nunito', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
